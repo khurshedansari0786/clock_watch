@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: aqua;
+    min-height: 100vh;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    /* position: relative; */
+    position: absolute;
+}
+
+.watch {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgb(49, 42, 42);
+    border: 5px solid rgb(136, 132, 132);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.watch::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    background-color: white;
+    z-index: 2;
+}
+
+.watch span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+
+
+}
+
+.watch span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.hand i {
+    position: absolute;
+    width: 4px;
+    /* height: 70px; */
+    border-radius: 8px;
+    background-color: var(--clr);
+    height: var(--h);
+
+}
